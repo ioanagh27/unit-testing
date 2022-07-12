@@ -20,4 +20,23 @@ describe("getLargest", () => {
     })
 })
 
+describe("getSmallest", () => {
+
+    test("getSmallest is a function", () => {
+        expect(typeof getSmallest).toBe("function");
+    })
+    
+    describe("It handles normal inputs successfully", () => {
+        
+        each([
+            [[1, 2, 3], 1],
+            [[9, 8, 7], 7],
+            [[12, 36, 19], 12]
+        ]).test("%s -> %s", (arr, expected) => {
+            expect(getSmallest(...arr)).toEqual(expected)
+        })
+    })
+})
+
+
 
