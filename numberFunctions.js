@@ -10,4 +10,7 @@ const getSmallest = (a, b, c) => {
 }
 //Export the function
 
-module.exports = getLargest;
+module.exports ={ 
+    getLargest,
+    getSmallest
+};
